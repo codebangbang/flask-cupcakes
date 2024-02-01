@@ -3,11 +3,11 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
-default_pic = 'https://tinyurl.com/demo-cupcake'
+default_pic = '/static/Most-Amazing-Chocolate-Cupcakes-1-small.jpg'
 
 def connect_db(app):
-    with app.app_context():
-        db.app = app
+    # with app.app_context():
+    db.app = app
     db.init_app(app)
 
 
